@@ -1,0 +1,45 @@
+.movieGrid {
+  display: grid;
+  /* 화면 너비에 따라 자동으로 컬럼 개수 조절 */
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.movieCard {
+  position: relative;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  border-radius: 8px;
+  color: #f7f7f7;
+}
+
+.movieCard:hover {
+  transform: scale(1.05); /* 마우스 올리면 살짝 커짐 */
+  z-index: 10;
+}
+
+.poster {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.posterTitle {
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+}
+.posterTitle a {
+  color: white;
+  text-decoration: none; /* 링크의 밑줄을 없애고 싶다면 추가하세요 */
+}
+
+.overview {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 보여줄 줄 수 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

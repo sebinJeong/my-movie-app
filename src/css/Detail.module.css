@@ -1,0 +1,94 @@
+.container {
+  background-color: #212122;
+  color: white;
+  min-height: 100vh;
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 20px;
+}
+/* ------------------------- backdrop img --------------------------- */
+.backDropImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top; 
+  display: block;
+}
+
+.backdropWrapper {
+  background-color: #212122;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.backdropWrapper::after {
+  content: ""; 
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-image: linear-gradient(
+    to bottom,
+    rgba(20, 20, 20, 0) 0%,
+    rgba(20, 20, 20, 0) 60%,
+    #212122 100%
+  );
+
+  z-index: 1; 
+}
+
+/* ------------------------------------------------------------- */
+.infoSection {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding-top: 20px;
+}
+
+.mainInfo{
+    flex: 2;
+}
+.subInfo{
+    flex: 1;
+    font-size: 0.9rem;
+}
+
+.metaDataBox{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 1.1rem;
+    color: #a3a3a3;
+}
+.divider {
+  color: #acacac; /* 구분선은 더 어둡게 처리 */
+  font-weight: 300;
+}
+
+.creditsList{
+    color: #a3a3a3;
+    display: flex;
+    gap: 5px;
+    
+}
+.creditsList span:first-child {
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.genresBox{
+    color: #a3a3a3;
+    align-items: center;
+}
+
+.content {
+  position: relative; 
+  z-index: 2; 
+  padding: 20px;
+  margin-top: -50px; 
+}
