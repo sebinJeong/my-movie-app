@@ -5,9 +5,10 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import MovieDetail from "../components/MovieDetail";
 import { useParams } from "react-router-dom";
+import MovieDetail from "../components/MovieDetail";
 import MovieCredits from "../components/MovieCredits";
+import SimilarMovie from "../components/SimilarMovie";
 import styles from "../css/Movie.module.css";
 
 function Detail() {
@@ -17,6 +18,7 @@ function Detail() {
   const { id } = useParams();
 
   useEffect(() => {
+    window.scrollTo(0, 0)
     const getDetailData = async () => {
       try {
         const [movieDResp, movieCResp] = await Promise.all([
@@ -42,7 +44,7 @@ function Detail() {
       }
     };
     getDetailData();
-  }, []);
+  }, [id]);
 
   return (
     <>
@@ -58,6 +60,7 @@ function Detail() {
             releaseDate={movie.release_date}
             runtime={movie.runtime}
             overview={movie.overview}
+            poster={movie.poster_path}
             backDropImg={movie.backdrop_path}
             genres={movie.genres}
           >
@@ -77,6 +80,7 @@ function Detail() {
               )}
             </div>
           </MovieDetail>
+          <SimilarMovie />
         </div>
       )}
     </>

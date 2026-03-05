@@ -6,7 +6,9 @@ function Movie({ id, coverImg, title, overview }) {
   return (
     <Link to={`/movie/${id}`}>
       <div className={styles.movieCard}>
-        <img src={coverImg} alt={title} className={styles.poster} />
+        <div className={styles.posterContainer}>
+          <img src={coverImg} alt={title} className={styles.poster} />
+        </div>
         <h2 className={styles.posterTitle}>{title}</h2>
         <p className={styles.overview}>{overview}</p>
       </div>

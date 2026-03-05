@@ -14,7 +14,6 @@ function Home() {
           `https://nomad-movies.nomadcoders.workers.dev/movies`,
         );
         const json = await response.json();
-        console.log(json);
         setMovies(json);
         setLoading(false);
       } catch (error) {

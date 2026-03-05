@@ -1,0 +1,11 @@
+.recommandWrapper {
+    background-color: #212122;
+    color: white;
+    padding: 40px;
+}
+
+.title {
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 700;
+}

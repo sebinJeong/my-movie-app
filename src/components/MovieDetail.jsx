@@ -8,6 +8,7 @@ function MovieDetail({
   voteAverage,
   releaseDate,
   runtime,
+  poster,
   overview,
   backDropImg,
   genres,
@@ -24,30 +25,35 @@ function MovieDetail({
           className={styles.backDropImg}
         />
       </div>
-      <h1>{title}</h1>
-      <h3>{origin_title}</h3>
-      <div className={styles.infoSection}>
-        <div className={styles.mainInfo}>
-          <div className={styles.metaDataBox}>
-            <span>{releaseDate}</span>
-            <span className={styles.divider}>|</span>
-            <span>
-              {hour > 0 ? `${hour}H` : ""}
-              {` ${minute}M `}
-            </span>
-            <span className={styles.divider}>|</span>
-            <span>⭐ {voteAverage.toFixed(1)}</span>
-          </div>
-          <p>{overview}</p>
+      <div className={styles.detailContainer}>
+        <div className={styles.movieWrapper}>
+          <h1 className={styles.movieTitle}>{title}</h1>
+          <img className={styles.poster} src={poster} alt={title} />
         </div>
-        <div className={styles.subInfo}>
-          <div className={styles.creditsList}>
-            <span>credits : </span>
-            {children}
+        <h3>{origin_title}</h3>
+        <div className={styles.infoSection}>
+          <div className={styles.mainInfo}>
+            <div className={styles.metaDataBox}>
+              <span>{releaseDate}</span>
+              <span className={styles.divider}>|</span>
+              <span>
+                {hour > 0 ? `${hour}H` : ""}
+                {` ${minute}M `}
+              </span>
+              <span className={styles.divider}>|</span>
+              <span>⭐ {voteAverage.toFixed(1)}</span>
+            </div>
+            <p>{overview}</p>
           </div>
-          <p className={styles.genresBox}>
-            genres : {genres.map((g) => g.name).join(", ")}
-          </p>
+          <div className={styles.subInfo}>
+            <div className={styles.creditsList}>
+              <span>credits : </span>
+              {children}
+            </div>
+            <p className={styles.genresBox}>
+              genres : {genres.map((g) => g.name).join(", ")}
+            </p>
+          </div>
         </div>
       </div>
     </div>
