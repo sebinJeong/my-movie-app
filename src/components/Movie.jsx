@@ -5,12 +5,14 @@ import styles from "../css/Movie.module.css";
 function Movie({ id, coverImg, title, overview }) {
   return (
     <Link to={`/movie/${id}`}>
-      <div className={styles.movieCard}>
+      <div className={`${styles.movieCard} ${styles.font}`}>
         <div className={styles.posterContainer}>
           <img src={coverImg} alt={title} className={styles.poster} />
         </div>
-        <h2 className={styles.posterTitle}>{title}</h2>
-        <p className={styles.overview}>{overview}</p>
+        <div className={styles.movieData}>
+          <h2 className={styles.posterTitle}>{title}</h2>
+          <p className={styles.overview}>{overview}</p>
+        </div>
       </div>
     </Link>
   );

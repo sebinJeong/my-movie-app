@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "../css/Detail.module.css";
 
 function MovieDetail({
@@ -18,6 +19,9 @@ function MovieDetail({
 
   return (
     <div className={styles.container}>
+      <Link to="/" className={styles.homeBtn} title="Back to Home">
+        🍿
+      </Link>
       <div className={styles.backdropWrapper}>
         <img
           src={backDropImg}

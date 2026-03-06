@@ -1,3 +1,17 @@
+.homeBtn{
+  position: absolute;
+  font-size: 40px;
+  text-decoration: none;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+}
+
+.homeBtn:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
 .container {
   background-color: #212122;
   color: white;
@@ -78,10 +92,16 @@
 
 .mainInfo{
     flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 .subInfo{
     flex: 1;
     font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .metaDataBox{

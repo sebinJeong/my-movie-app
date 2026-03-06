@@ -12,9 +12,16 @@
   box-sizing: border-box;
 }
 .font {
-  font-family:
-    "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+.loading{
+  color: #f7f7f7;
+  text-align: center;
+  margin-top: 30px;
+}
+
+
 
 .title {
   color: #f7f7f7;

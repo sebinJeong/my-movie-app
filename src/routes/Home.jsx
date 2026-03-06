@@ -27,9 +27,13 @@ function Home() {
   return (
     <>
       <div className={styles.home}>
-        <h1 className={`${styles.title} ${styles.font}`}>movieCat</h1>
+        <h1 className={`${styles.title} ${styles.font}`}>
+          🍿 movieMeta
+        </h1>
         {loading ? (
-          <h1>Loading...</h1>
+          <div className={stylesM.loaderContainer}>
+            <div className={stylesM.spinner}></div>
+          </div>
         ) : (
           <div className={stylesM.movieGrid}>
             {movies.map((movie) => (

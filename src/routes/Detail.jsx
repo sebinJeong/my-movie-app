@@ -18,7 +18,7 @@ function Detail() {
   const { id } = useParams();
 
   useEffect(() => {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
     const getDetailData = async () => {
       try {
         const [movieDResp, movieCResp] = await Promise.all([
@@ -49,7 +49,9 @@ function Detail() {
   return (
     <>
       {loading ? (
-        <h1>loading...</h1>
+        <div className={styles.loaderContainer}>
+          <div className={styles.spinner}></div>
+        </div>
       ) : (
         <div>
           <MovieDetail
