@@ -3,8 +3,9 @@ movieMeta는 최신 영화 정보를 한눈에 확인하고 상세 정보를 탐
 사용 API : https://nomad-movies.nomadcoders.workers.dev/
 
 ## 미리보기
-![alt text](<스크린샷 2026-03-06 오후 5.55.47.png>)
-![alt text](<스크린샷 2026-03-06 오후 5.56.01.png>)
+<img width="1180" height="820" alt="Image" src="https://github.com/user-attachments/assets/18af5dfd-d044-4804-9335-40dfb83af664" />
+
+<img width="1204" height="848" alt="Image" src="https://github.com/user-attachments/assets/2aa81e78-6533-41a5-b3cf-2dd36aa12a22" />
 **[🔗 웹사이트 방문하기](https://sebinjeong.github.io/my-movie-app/)**
 
 
